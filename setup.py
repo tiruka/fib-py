@@ -1,12 +1,15 @@
 from setuptools import find_packages, setup
 
+with open("README.md", "r") as f:
+    long_description = f.read()
+
 setup(
-    name="fib_py",
+    name="tiruka-fib-py",
     version="0.0.1",
     author="tiruka",
     author_email="tiruka.engineer@gmail.com",
     description="Calculates a Fibonacci number",
-    long_description="A basic library that calculates Fibonacci numbers",
+    long_description=long_description,
     long_description_content_type="text/markdown",
     url="https://github.com/tiruka/fib-py",
     install_requires=[],
