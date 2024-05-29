@@ -21,4 +21,9 @@ setup(
     ],
     python_require=">=3",
     tests_require=["pytest"],
+    entry_points={
+        "console_scripts": [
+            "fib-number = tiruka_fib_py.cmd.fib_numb",
+        ]
+    },
 )
