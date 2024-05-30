@@ -1,6 +1,3 @@
-from typing import Optional
-
-
 def rec_fibonacci_numbers(number: int) -> int:
     if number < 0:
         raise ValueError("Number must be a non-negative integer")
