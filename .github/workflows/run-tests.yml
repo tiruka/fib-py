@@ -12,6 +12,8 @@ jobs:
       - name: run tests
         env:
           PYTHONPATH: ${{ github.workspace }}/tiruka_fib_py
-        run: python -m unittest discover ./tests
+        run: |
+          echo "PYTHONPATH: $PYTHONPATH"
+          python -m unittest discover ./tests
       - name: run type checking
         run: mypy tiruka_fib_py
