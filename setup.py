@@ -1,11 +1,16 @@
+import pathlib
 from setuptools import find_packages, setup
 
 with open("README.md", "r") as f:
     long_description = f.read()
+with open(
+    str(pathlib.Path(__file__).parent.absolute()) + "/flitton_fib_py/version.py", "r"
+) as fh:
+    version = fh.read().split("=")[1].replace("'", "")
 
 setup(
     name="tiruka-fib-py",
-    version="0.0.1",
+    version=version,
     author="tiruka",
     author_email="tiruka.engineer@gmail.com",
     description="Calculates a Fibonacci number",
