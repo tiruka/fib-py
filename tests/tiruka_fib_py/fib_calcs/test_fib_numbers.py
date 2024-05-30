@@ -4,7 +4,7 @@ from unittest.mock import patch
 from tiruka_fib_py.fib_calcs.fib_numbers import calculate_numbers
 
 
-class Test(TestCase):
+class TestFibNumbers(TestCase):
     @patch("tiruka_fib_py.fib_calcs.fib_numbers." "rec_fibonacci_numbers")
     def test_calculate_numbers(self, mock_fib_calc):
         expected_outcome = [mock_fib_calc.return_value, mock_fib_calc.return_value]

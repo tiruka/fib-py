@@ -9,10 +9,9 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-
       - name: run tests
         env:
-          PYTHONPATH: ./tiruka_fib_py
+          PYTHONPATH: ${{ github.workspace }}/tiruka_fib_py
         run: python -m unittest discover ./tests
       - name: run type checking
         run: mypy tiruka_fib_py
