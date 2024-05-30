@@ -7,7 +7,11 @@ class RecFibNumberTest(TestCase):
         self.assertEqual(0, rec_fibonacci_numbers(0))
 
     def test_negative(self):
-        self.assertIsNone(rec_fibonacci_numbers(-1))
+        with self.assertRaises(ValueError) as raised_exception:
+            rec_fibonacci_numbers(-1)
+        self.assertEqual(
+            "Number must be a non-negative integer", str(raised_exception.exception)
+        )
 
     def test_one(self):
         self.assertEqual(1, rec_fibonacci_numbers(1))
