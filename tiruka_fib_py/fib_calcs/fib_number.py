@@ -1,9 +1,9 @@
 from typing import Optional
 
 
-def rec_fibonacci_numbers(number: int) -> Optional[str]:
+def rec_fibonacci_numbers(number: int) -> int:
     if number < 0:
-        return None
+        raise ValueError("Number must be a non-negative integer")
     if number <= 1:
         return number
     return rec_fibonacci_numbers(number - 1) + rec_fibonacci_numbers(number - 2)
