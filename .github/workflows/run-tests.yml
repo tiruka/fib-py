@@ -11,7 +11,7 @@ jobs:
           pip install -r requirements.txt
       - name: run tests
         run: |
-          echo "PYTHONPATH=$(pwd)" >> $GITHUB_ENV
+          export PYTHONPATH="./tiruka_fib_py"
           python -m unittest discover ./tests
       - name: run type checking
         run: mypy tiruka_fib_py
